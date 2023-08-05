@@ -1,0 +1,246 @@
+/* HomePage.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+/* Homepage container */
+.homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0; /* Initially hide the whole page */
+}
+
+/* Animate the appearance of the whole page */
+.homepage.animate {
+  opacity: 1;
+  animation: fadeIn 1s forwards;
+}
+
+/* Banner styles */
+.banner {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.banner p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Animate the appearance of the banner */
+.banner.animate {
+  animation: slideInTop 1s forwards;
+}
+
+/* Student section styles */
+.student-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.student-info {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(-30px); /* Initially move the element to the left */
+  opacity: 0; /* Initially hide the element */
+}
+
+/* Animate the appearance of the student-info section */
+.student-info.animate {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInRight 1s forwards;
+}
+
+.student-image {
+  flex: 1;
+  text-align: right;
+  transform: translateX(30px); /* Initially move the element to the right */
+  opacity: 0; /* Initially hide the element */
+}
+
+/* Animate the appearance of the student-image section */
+.student-image.animate {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInLeft 1s forwards;
+}
+
+/* CTA button styles (for Learn More and Search Jobs buttons) */
+.cta-button, .search-jobs-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Remove button outline on focus (optional) */
+}
+
+.cta-button:hover, .search-jobs-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Colleague Stories section styles */
+.colleague-stories {
+  margin-top: 40px;
+}
+
+.colleague-story {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.colleague-story img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Services section styles */
+.services {
+  margin-top: 40px;
+}
+
+.services ul {
+  list-style: none;
+}
+
+.services li {
+  margin-bottom: 10px;
+}
+
+/* Frequently Asked Questions (FAQs) section styles */
+.faq {
+  margin-top: 40px;
+}
+
+.faq h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Contact Us section styles */
+.contact-section {
+  margin-top: 40px;
+}
+
+/* Search Jobs section styles */
+.search-jobs {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Additional theme styles */
+.homepage {
+  color: #333; /* Dark text color */
+}
+
+header h1 {
+  font-weight: bold;
+  color: #fff; /* White header text color */
+}
+
+.banner {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cta-button, .search-jobs-button {
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+img{
+  width: 500px;
+  height: 250px;
+}
+.hdimg{
+  width:1200px
+}
+
+/* Keyframes for fadeIn, slideIn, and slideInTop animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
